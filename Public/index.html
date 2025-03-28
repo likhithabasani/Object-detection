@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Object Detection</h1>
+        <div class="header-buttons">
+            <button id="login-btn" onclick="showLoginForm()">Login</button>
+            <button id="signup-btn" onclick="showSignupForm()">Signup</button>
+            <button id="logout-btn" onclick="logout()" style="display: none;">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Upload Section -->
+        <section id="upload-section">
+            <h2>Camera Access</h2>
+            <button onclick="openCamera()">Open Camera</button>
+            <button id="close-camera-btn" onclick="closeCamera()" style="display: none;">Close Camera</button>
+            
+            <video id="camera-stream" style="display: none;" autoplay></video>
+        </section>
+<!-- Video Stream Container -->
+<!-- Video Stream Container -->
+
+
+
+        <!-- Login and Signup Forms -->
+        <section id="form-section">
+            <div class="auth-container">
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form" style="display: none;">
+                    <h3>Login</h3>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                    <button type="submit" onclick="login(event)">Login</button>
+                    <p><a href="#" onclick="showForgotPasswordForm()">Forgot Password?</a></p>
+                    <p>Don't have an account? <a href="#" onclick="showSignupForm()">Sign up</a></p>
+                </form>
+
+                <!-- Forgot Password Form -->
+                <form id="forgot-password-form" class="auth-form" style="display: none;">
+                    <h3>Forgot Password</h3>
+                    <label for="forgot-email">Enter Your Email</label>
+                    <input type="email" id="forgot-email" required>
+                    <button type="submit" onclick="forgotPassword(event)">Submit</button>
+                    <p><a href="#" onclick="showLoginForm()">Back to Login</a></p>
+                </form>
+
+                <!-- Reset Password Form -->
+                <form id="reset-password-form" class="auth-form" style="display: none;">
+                    <h3>Reset Password</h3>
+                    <label for="reset-password">New Password</label>
+                    <input type="password" id="reset-password" required>
+                    <button type="submit" onclick="resetPassword(event)">Reset Password</button>
+                    <p><a href="#" onclick="showLoginForm()">Back to Login</a></p>
+                </form>
+
+                <!-- Signup Form -->
+                <form id="signup-form" class="auth-form" style="display: none;">
+                    <h3>Signup</h3>
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                    <button type="submit" onclick="signup(event)">Signup</button>
+                    <p id="signup-message" style="color: red;"></p> 
+                    <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

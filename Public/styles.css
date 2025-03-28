@@ -1,0 +1,223 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('img.jpeg') no-repeat center center fixed;
+
+    background-size: cover;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(239, 233, 233, 0.8); /* Adjust transparency */
+    z-index: -1;
+}
+
+/* Header */
+/* Ensure the header uses flex properly */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #343a40;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Header Buttons (Login, Signup, Logout) */
+.header-buttons {
+    margin-left: 12px; /* Push buttons to the right */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right:40px
+}
+
+/* Logout Button */
+#logout-btn {
+    padding: 8px 16px;
+    border: none;
+    background-color: #dc3545; /* Red color */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#logout-btn:hover {
+    background-color: #b02a37; /* Darker red */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header-buttons button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.header-buttons button:hover {
+    background-color: #0056b3;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 80px auto; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Left Column: Upload Section */
+#upload-section {
+    width: 60%; /* Adjust width to give more space to the right */
+    padding: 20px;
+    background-color: transparent; /* Remove white background */
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 120px;
+}
+/* Adjust the position of the Open Camera button */
+
+#upload-section h2 {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+#upload-section button {
+    width: 500px; /* Increased width */
+    padding: 15px; /* Increased padding */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px; /* Increased font size */
+}
+
+#upload-section button:hover {
+    background-color: #0056b3;
+}
+
+
+#form-section {
+    width: 35%; 
+    position: relative;
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 20px; 
+    display:block;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    background-color: transparent;
+    padding-top: 20px; 
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 300px; 
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #81b8f4;
+    display:block;
+}
+
+.auth-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-form button:hover {
+    background-color: #0056b3;
+}
+
+.auth-form p {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.auth-form a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-form a:hover {
+    text-decoration: underline;
+}
+
+#logout-btn {
+    display: none; 
+    padding: 8px 16px;
+    border: none;
+    background-color: #dc3545; 
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#logout-btn:hover {
+    background-color: #b02a37; 
+}
